@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oyins - Portfolio</title>
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    
+    /* Header Styles */
+    header {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    
+    /* Main Content Styles */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    
+    section {
+      margin-bottom: 3rem;
+    }
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+      position: relative;
+    }
+    
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      margin: 0.5rem auto;
+      border-radius: 2px;
+    }
+    
+    /* Projects Section */
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    
+    .project-card h3 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    
+    .project-card p {
+      flex-grow: 1;
+      margin-bottom: 1.5rem;
+      color: #666;
+    }
+    
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .project-links a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      flex: 1;
+      text-align: center;
+    }
+    
+    .project-links a:hover {
+      background: linear-gradient(to right, #5a0db5, #1c68e8);
+      transform: translateY(-2px);
+    }
+    
+    /* Footer Styles */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .footer-content h2 {
+      color: white;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer-content h2::after {
+      background: linear-gradient(to right, #ff8a00, #ff2070);
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .contact-info a {
+      color: #ff8a00;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .contact-info a:hover {
+      color: #ff2070;
+    }
+    
+    .copyright {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #444;
+      color: #aaa;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      .projects-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-links {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌟 My Portfolio</h1>
+    <p>Showcasing my Web Development Projects</p>
+  </header>
+
+  <main>
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <h3>💰 Expense Tracker</h3>
+          <p>A simple app to track your daily expenses and manage budgets effectively.</p>
+          <div class="project-links">
+            <a href="https://rad-otter-7787c0.netlify.app/" target="_blank">Live Demo</a>
+            <a href="https://github.com/YOUR-USERNAME/expense-tracker" target="_blank">Source Code</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>🍴 Recipe Finder</h3>
+          <p>Search recipes by ingredient or dish name using TheMealDB API. Find recipes easily with ingredients you have.</p>
+          <div class="project-links">
+            <a href="https://deluxe-tapioca-c82322.netlify.app/" target="_blank">Live Demo</a>
+            <a href="https://github.com/YOUR-USERNAME/recipe-app" target="_blank">Source Code</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>🌦️ Weather App</h3>
+          <p>Check real-time weather updates by city name using OpenWeatherMap API.</p>
+          <div class="project-links">
+            <a href="https://effulgent-pixie-bc103c.netlify.app/" target="_blank">Live Demo</a>
+            <a href="https://github.com/YOUR-USERNAME/weather-app" target="_blank">Source Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <h2>Contact Me</h2>
+      <div class="contact-info">
+        <p>Email: <a href="mailto:oyins3714@gmail.com">oyins3714@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/Flonde" target="_blank">github.com/Flonde</a></p>
+        <p>X (Twitter): <a href="https://x.com/Flonde?t=sdQKeAdLJgq67ASaXawkZg&s=09" target="_blank">@Flonde</a></p>
+      </div>
+      <p class="copyright">Built with ❤️ by Oyins &copy; 2025</p>
+    </div>
+  </footer>
+</body>
+</html>
